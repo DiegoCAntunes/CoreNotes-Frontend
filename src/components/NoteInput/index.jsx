@@ -1,14 +1,16 @@
-import { Container, Star } from "./styles";
+import { Container, Content, Star } from "./styles";
 import { FiStar } from 'react-icons/fi'
 
 export function NoteInput(){
     return(
         <Container>
             <header>
-                <h1>Título</h1>
+                <input placeholder="Título"></input>
                 <Star><FiStar /></Star>
             </header>
-            <input placeholder= "Criar nota..." />
+            <Content>
+                <textarea placeholder= "Criar nota..."></textarea>
+            </Content>
         </Container>
     )
 }

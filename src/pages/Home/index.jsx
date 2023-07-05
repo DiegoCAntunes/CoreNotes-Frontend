@@ -3,6 +3,7 @@ import { NoteInput } from "../../components/NoteInput"
 import { Container } from "./styles"
 import { Section } from "../../components/Section"
 import { Note } from "../../components/Note"
+import { ColorPalette } from "../../components/ColorPalette" 
 
 export function Home(){
     return(

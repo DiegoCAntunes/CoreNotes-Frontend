@@ -27,14 +27,13 @@ export const Container = styled.div`
         }
     }
 
-    >input{
+    textarea, input{
         width: 100%;
         background: none;
         border: none;
-        padding: 14px 22px 36px;
-        height: 64px;
-        font-size: 13px;
+        font-size: 1rem;
         word-break: break-word;
+        resize: none;
     }
 
     @media (min-width: 700px) {
@@ -42,6 +41,10 @@ export const Container = styled.div`
         max-width: ${({theme}) => theme.SIZES.INPUT_MAX_WIDTH_DESKTOP};
     }
 `
+export const Content = styled.div`
+    padding: 1rem;
+`
+
 
 export const Star = styled.button`
     border: none;

@@ -64,3 +64,11 @@ export const TextArea = styled.textarea`
     padding: 14px 39px 0 23px;
     font-size: 13px;
 `
+
+export const Bucket = styled.div`
+    position: relative;
+
+    .color-palette{
+        position: absolute;
+    }
+`
