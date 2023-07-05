@@ -36,6 +36,14 @@ export const Container = styled.div`
         resize: none;
     }
 
+    >footer{
+        button{
+            border: none;
+            background-color: ${({theme}) => theme.COLORS.BACKGROUND_BODY};
+
+        }
+    }
+
     @media (min-width: 700px) {
         border-radius: 0;
         max-width: ${({theme}) => theme.SIZES.INPUT_MAX_WIDTH_DESKTOP};
@@ -52,5 +60,9 @@ export const Star = styled.button`
 
     > svg{
         font-size: 19px;
+    }
+
+    >.is-favorite{
+        fill: black;
     }
 `

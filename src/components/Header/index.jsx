@@ -4,9 +4,7 @@ import { Container } from "./styles";
 import notesIcon from "../../assets/notesIcon.svg"
 import { Input } from "../Input"
 
-export function Header(){
-    // const { signOut, user } = useAuth()
-
+export function Header({event}){
     return(
         <Container>
             <div>
@@ -14,7 +12,9 @@ export function Header(){
                 <h1> CoreNotes</h1>
                 <Input 
                 placeholder="Pesquisar notas"
-                icon={FiSearch}/>
+                icon={FiSearch}
+                onChange = {event}
+                />
             </div>
 
             <FiX />

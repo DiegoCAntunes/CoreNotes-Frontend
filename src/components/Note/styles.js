@@ -23,8 +23,7 @@ export const Container = styled.div`
         }
 
         >button{
-            transform: translateY(4px);
-            
+            transform: translateY(4px); 
         }
     }
 
@@ -32,6 +31,8 @@ export const Container = styled.div`
         display: flex;
         justify-content: space-between;
         padding: 11px 20px;
+        position: relative;
+        z-index: 1;
 
         >div{
             display: flex;

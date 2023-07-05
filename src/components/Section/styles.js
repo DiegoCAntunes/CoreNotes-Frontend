@@ -5,6 +5,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 
     > h2{
         padding-left: 20px;
