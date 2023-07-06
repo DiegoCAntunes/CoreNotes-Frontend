@@ -15,6 +15,9 @@ export function Home(){
     const [deleteState, setDeleteState] = useState(false)
     const [submitState, setSubmitState] = useState(false)
 
+    const favArray = notes.filter( note => note.isFavorite)
+    const noFavArray = notes.filter( note => !note.isFavorite)
+
     async function handleRemove(id){
         const confirm = window.confirm("Deseja realmente remover a nota?")
     
@@ -29,7 +32,7 @@ export function Home(){
             const response = await api.get(`/?title=${search}`)
             setNotes(response.data)
         }
-
+        
         fetchNotes()
     }, [search, deleteState, submitState])
 
@@ -46,7 +49,7 @@ export function Home(){
                 />
                 <Section title="Favoritas">
                     {   
-                        notes.map( note => (
+                        favArray.map( note => (
                             <Note 
                                 key={String(note.id)}
                                 data={note}
@@ -56,7 +59,15 @@ export function Home(){
                     }
                 </Section>
                 <Section title="Outras">
-                    <Note />
+                {   
+                        noFavArray.map( note => (
+                            <Note 
+                                key={String(note.id)}
+                                data={note}
+                                clickFunction={() => handleRemove(note.id)}
+                            />
+                        ))
+                    }
                 </Section>
             </main>
         </Container>

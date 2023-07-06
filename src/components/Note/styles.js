@@ -17,9 +17,14 @@ export const Container = styled.div`
         align-items: center;
         height: 40px;
 
-        >h1{
+        >textarea{
             font-size: 14px;
             transform: translateY(4px);
+            width: 100%;
+            border: none;
+            resize: none;
+            background-color: none;
+            height: 25px;
         }
 
         >button{
@@ -44,9 +49,16 @@ export const Container = styled.div`
 export const Button = styled.button`
     border: none;
     background: none;
+    border-radius: 50%;
+    height: 29px;
+    width: 29px;
 
     > svg{
         font-size: 19px;
+    }
+
+    >.is-favorite{
+        fill: black;
     }
 `
 
