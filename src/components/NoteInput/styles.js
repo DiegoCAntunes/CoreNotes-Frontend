@@ -37,10 +37,16 @@ export const Container = styled.div`
     }
 
     >footer{
+        display: flex;
+        padding: 0 0.5rem 0.5rem 0;
+        justify-content: center;
+
         button{
             border: none;
-            background-color: ${({theme}) => theme.COLORS.BACKGROUND_BODY};
-
+            background-color: rgba(51, 51, 51, 0.05);
+            border-radius: 0.5rem;
+            line-height: 1.5rem;
+            padding: 0.2rem 2rem;
         }
     }
 
@@ -50,7 +56,7 @@ export const Container = styled.div`
     }
 `
 export const Content = styled.div`
-    padding: 1rem;
+    padding: .3rem;
 `
 
 

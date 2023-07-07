@@ -14,6 +14,7 @@ export function Home(){
     const [notes, setNotes] = useState([])
     const [deleteState, setDeleteState] = useState(false)
     const [submitState, setSubmitState] = useState(false)
+    const [favoritedState, setFavoritedState] = useState(false)
 
     const favArray = notes.filter( note => note.isFavorite)
     const noFavArray = notes.filter( note => !note.isFavorite)
@@ -34,7 +35,7 @@ export function Home(){
         }
         
         fetchNotes()
-    }, [search, deleteState, submitState])
+    }, [search, deleteState, submitState, favoritedState])
 
     return(
         <Container>
@@ -53,7 +54,8 @@ export function Home(){
                             <Note 
                                 key={String(note.id)}
                                 data={note}
-                                clickFunction={() => handleRemove(note.id)}
+                                onRemove={() => handleRemove(note.id)}
+                                onFavorited={() => setFavoritedState(!favoritedState)}
                             />
                         ))
                     }
@@ -64,7 +66,8 @@ export function Home(){
                             <Note 
                                 key={String(note.id)}
                                 data={note}
-                                clickFunction={() => handleRemove(note.id)}
+                                onRemove={() => handleRemove(note.id)}
+                                onFavorited={() => setFavoritedState(!favoritedState)}
                             />
                         ))
                     }
