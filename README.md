@@ -37,7 +37,7 @@ The CoreNotes project is a comprehensive note management system designed to stre
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your_username/your_project.git
+    git clone https://github.com/ItsDigs/CoreNotes-Frontend
     cd your_project
 
 2. **Install dependencies**
