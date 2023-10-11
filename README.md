@@ -10,7 +10,7 @@ The CoreNotes project is a comprehensive note management system designed to stre
 - [Installation](#installation)
 
 ## Screenshots
-![Screenshot 1](/public/screenshot1.png)
+![Screenshot 1](/public/Screenshot1.png)
 ![Screenshot 2](/public/screenshot2.png)
 
 ## Features
